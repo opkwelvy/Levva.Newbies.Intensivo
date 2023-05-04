@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "5K2U4H1nPRpTVpVA5dWmUoiGjgvMOKwwNgedbhaGvN6NGG8fb1dd/oU3KpV9iC7mP0XOBQTXaf4wUKLJYT++CQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\KelvyCorreaNasciment\\source\\repos\\Levva.Newbies.Intensivo\\Levva.Newbies.Intensivo\\Levva.Newbies.Intensivo.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\KelvyCorreaNasciment\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\KelvyCorreaNasciment\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\KelvyCorreaNasciment\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "C:\\Users\\KelvyCorreaNasciment\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "C:\\Users\\KelvyCorreaNasciment\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "C:\\Users\\KelvyCorreaNasciment\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}
