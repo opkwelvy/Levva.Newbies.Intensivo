@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\KelvyCorreaNasciment\\source\\repos\\Levva.Newbies.Intensivo\\Levva.Newbies.Intensivo\\Levva.Newbies.Intensivo.csproj": {}
+    "C:\\Users\\KelvyCorreaNasciment\\Source\\Repos\\Levva.Newbies.Intensivo\\Levva.Newbies.Intensivo\\Levva.Newbies.Intensivo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\KelvyCorreaNasciment\\source\\repos\\Levva.Newbies.Intensivo\\Levva.Newbies.Intensivo\\Levva.Newbies.Intensivo.csproj": {
+    "C:\\Users\\KelvyCorreaNasciment\\Source\\Repos\\Levva.Newbies.Intensivo\\Levva.Newbies.Intensivo\\Levva.Newbies.Intensivo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\KelvyCorreaNasciment\\source\\repos\\Levva.Newbies.Intensivo\\Levva.Newbies.Intensivo\\Levva.Newbies.Intensivo.csproj",
+        "projectUniqueName": "C:\\Users\\KelvyCorreaNasciment\\Source\\Repos\\Levva.Newbies.Intensivo\\Levva.Newbies.Intensivo\\Levva.Newbies.Intensivo.csproj",
         "projectName": "Levva.Newbies.Intensivo",
-        "projectPath": "C:\\Users\\KelvyCorreaNasciment\\source\\repos\\Levva.Newbies.Intensivo\\Levva.Newbies.Intensivo\\Levva.Newbies.Intensivo.csproj",
+        "projectPath": "C:\\Users\\KelvyCorreaNasciment\\Source\\Repos\\Levva.Newbies.Intensivo\\Levva.Newbies.Intensivo\\Levva.Newbies.Intensivo.csproj",
         "packagesPath": "C:\\Users\\KelvyCorreaNasciment\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\KelvyCorreaNasciment\\source\\repos\\Levva.Newbies.Intensivo\\Levva.Newbies.Intensivo\\obj\\",
+        "outputPath": "C:\\Users\\KelvyCorreaNasciment\\Source\\Repos\\Levva.Newbies.Intensivo\\Levva.Newbies.Intensivo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\KelvyCorreaNasciment\\AppData\\Roaming\\NuGet\\NuGet.Config",

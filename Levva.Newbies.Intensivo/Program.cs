@@ -1,3 +1,6 @@
+
+using System.Globalization;
+
 namespace Levva.Newbies.Intensivo;
 
 public class Program
@@ -28,6 +31,10 @@ public class Program
 
         app.MapControllers();
 
+        var cultureInfo = new CultureInfo("pt-bt");
+        CultureInfo.DefaultThreadCurrentCulture = cultureInfo;
+        CultureInfo.DefaultThreadCurrentUICulture = cultureInfo;
+        
         app.Run();
     }
     
