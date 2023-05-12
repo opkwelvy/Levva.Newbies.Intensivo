@@ -2,7 +2,7 @@
 
 namespace Levva.Newbies.Intensivo.Data.Interfaces
 {
-    public interface IUserRepository
+    public interface IUsuarioRepository
     {
         void Create(Usuario usuario);
         Usuario Get(int id);
