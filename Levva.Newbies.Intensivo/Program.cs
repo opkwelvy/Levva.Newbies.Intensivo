@@ -1,4 +1,6 @@
 
+using Levva.Newbies.Intensivo.Data;
+using Microsoft.EntityFrameworkCore;
 using System.Globalization;
 
 namespace Levva.Newbies.Intensivo;
@@ -16,7 +18,12 @@ public class Program
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
 
+        builder.Services.AddDbContext<Context>(options => options.UseSqlite(builder.Configuration.GetConnectionString("Default"), b => b.MigrationsAssembly("Levva.Newbies.Intensivo"))); 
+
         var app = builder.Build();
+
+
+
 
         // Configure the HTTP request pipeline.
         if (app.Environment.IsDevelopment())
