@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "JgLGcU/Z5nhFRChXltV/X83IM/7SlDNBNCGvB8kPoCYPlk1QobKywPBXq21HnhsPpmu2Gw1ILIJRAfiO4eUhTQ==",
+  "dgSpecHash": "HCc3RmqxkIisTzfKWjZFdsjiJ3TqKtMJScoHvqdweGtjJMFhOfw18hoj5E2TGrPcEDfFdXom296gq+c7gC+BXA==",
   "success": true,
   "projectFilePath": "C:\\Users\\KelvyCorreaNasciment\\Source\\Repos\\Levva.Newbies.Intensivo\\Levva.Newbies.Intensivo\\Levva.Newbies.Intensivo.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\KelvyCorreaNasciment\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\KelvyCorreaNasciment\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\KelvyCorreaNasciment\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\KelvyCorreaNasciment\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\KelvyCorreaNasciment\\.nuget\\packages\\microsoft.data.sqlite.core\\7.0.5\\microsoft.data.sqlite.core.7.0.5.nupkg.sha512",
     "C:\\Users\\KelvyCorreaNasciment\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.5\\microsoft.entityframeworkcore.7.0.5.nupkg.sha512",
     "C:\\Users\\KelvyCorreaNasciment\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.5\\microsoft.entityframeworkcore.abstractions.7.0.5.nupkg.sha512",

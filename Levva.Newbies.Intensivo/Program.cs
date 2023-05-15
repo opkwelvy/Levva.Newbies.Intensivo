@@ -1,5 +1,6 @@
 
 using Levva.Newbies.Intensivo.Data;
+using Levva.Newbies.Intensivo.Logic.MapperProfiles;
 using Microsoft.EntityFrameworkCore;
 using System.Globalization;
 
@@ -18,7 +19,9 @@ public class Program
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
 
-        builder.Services.AddDbContext<Context>(options => options.UseSqlite(builder.Configuration.GetConnectionString("Default"), b => b.MigrationsAssembly("Levva.Newbies.Intensivo"))); 
+        builder.Services.AddDbContext<Context>(options => options.UseSqlite(builder.Configuration.GetConnectionString("Default"), b => b.MigrationsAssembly("Levva.Newbies.Intensivo")));
+
+        builder.Services.AddAutoMapper(typeof(DefaultMapper));
 
         var app = builder.Build();
 

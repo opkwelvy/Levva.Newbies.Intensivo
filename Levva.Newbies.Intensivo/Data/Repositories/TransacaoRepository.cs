@@ -10,30 +10,35 @@ namespace Levva.Newbies.Intensivo.Data.Repositories
         {
             _context = context;
         }
-        public void Create(Transacao transacao)
+        public void Create(TransacaoDto transacao)
         {
             _context.Transacao.Add(transacao);
+            _context.SaveChanges();
         }
 
         public void Delete(int id)
         {
             var transacao = _context.Transacao.Find(id);
             _context.Transacao.Remove(transacao);
+            _context.SaveChanges();
+
         }
 
-        public Transacao Get(int id)
+        public TransacaoDto Get(int id)
         {
             return _context.Transacao.Find(id);
         }
 
-        public List<Transacao> GetAll()
+        public List<TransacaoDto> GetAll()
         {
             return _context.Transacao.ToList();
         }
 
-        public void Update(Transacao transacao)
+        public void Update(TransacaoDto transacao)
         {
             _context.Transacao.Update(transacao);
+            _context.SaveChanges();
+
         }
     }
 }

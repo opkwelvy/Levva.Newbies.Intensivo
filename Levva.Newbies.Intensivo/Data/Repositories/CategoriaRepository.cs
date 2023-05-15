@@ -5,29 +5,41 @@ namespace Levva.Newbies.Intensivo.Data.Repositories
 {
     public class CategoriaRepository : ICategoriaRepository
     {
+        private readonly Context _context;
+        public CategoriaRepository(Context context)
+        {
+            _context = context;
+        }
         public void Create(Categoria categoria)
         {
-            throw new NotImplementedException();
+            _context.Categoria.Add(categoria);
+            _context.SaveChanges();
+
         }
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            var categoria = _context.Categoria.Find(id);
+            _context.Categoria.Remove(categoria);
+            _context.SaveChanges();
+
         }
 
         public Categoria Get(int id)
         {
-            throw new NotImplementedException();
+            return _context.Categoria.Find(id);
         }
 
         public List<Categoria> GetAll()
         {
-            throw new NotImplementedException();
+            return _context.Categoria.ToList();   
         }
 
         public void Update(Categoria categoria)
         {
-            throw new NotImplementedException();
+            _context.Categoria.Update(categoria);
+            _context.SaveChanges();
+
         }
     }
 }
