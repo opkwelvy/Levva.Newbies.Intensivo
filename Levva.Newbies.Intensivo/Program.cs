@@ -1,6 +1,10 @@
 
 using Levva.Newbies.Intensivo.Data;
+using Levva.Newbies.Intensivo.Data.Interfaces;
+using Levva.Newbies.Intensivo.Data.Repositories;
+using Levva.Newbies.Intensivo.Logic.Interfaces;
 using Levva.Newbies.Intensivo.Logic.MapperProfiles;
+using Levva.Newbies.Intensivo.Logic.Services;
 using Microsoft.EntityFrameworkCore;
 using System.Globalization;
 
@@ -22,6 +26,14 @@ public class Program
         builder.Services.AddDbContext<Context>(options => options.UseSqlite(builder.Configuration.GetConnectionString("Default"), b => b.MigrationsAssembly("Levva.Newbies.Intensivo")));
 
         builder.Services.AddAutoMapper(typeof(DefaultMapper));
+
+        builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
+        builder.Services.AddScoped<ITransacaoRepository, TransacaoRepository>();
+        builder.Services.AddScoped<ICategoriaRepository, CategoriaRepository>();
+
+        builder.Services.AddScoped<IUsuarioService, UsuarioService>();
+        builder.Services.AddScoped<ITransacaoService, TransacaoService>();
+        builder.Services.AddScoped<ICategoriaService, CategoriaService>();
 
         var app = builder.Build();
 

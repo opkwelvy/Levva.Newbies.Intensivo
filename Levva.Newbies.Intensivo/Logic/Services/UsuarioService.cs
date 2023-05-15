@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Levva.Newbies.Intensivo.Data.Interfaces;
+using Levva.Newbies.Intensivo.Data.Repositories;
 using Levva.Newbies.Intensivo.Domain.Models;
 using Levva.Newbies.Intensivo.Logic.Dtos;
 using Levva.Newbies.Intensivo.Logic.Interfaces;
