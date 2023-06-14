@@ -10,6 +10,5 @@ namespace Levva.Newbies.Intensivo.Data.Interfaces
         List<Categoria> GetAll();
         void Update(Categoria categoria);
         void Delete(int id);
-        void Create(CategoriaDto categoria);
     }
 }

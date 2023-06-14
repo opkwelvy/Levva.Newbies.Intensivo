@@ -9,6 +9,7 @@ namespace Levva.Newbies.Intensivo.Logic.MapperProfiles
         public DefaultMapper()
         {
             CreateMap<UsuarioDto, Usuario> ().ReverseMap();
+            CreateMap<NovoUsuarioDto, Usuario>().ReverseMap();
             CreateMap<TransacaoDto, Transacao> ().ReverseMap();
             CreateMap<CategoriaDto, Categoria> ().ReverseMap();
         }

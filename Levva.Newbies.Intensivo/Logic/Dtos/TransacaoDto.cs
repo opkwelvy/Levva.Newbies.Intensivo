@@ -11,8 +11,8 @@ namespace Levva.Newbies.Intensivo.Logic.Dtos
         public DateTime Data { get; set; }
         public TipoTransacaoEnum Tipo { get; set; }
         public int CategoriaId { get; set; } 
-        public virtual CategoriaDto Categoria { get; set; }
+        public virtual CategoriaDto? Categoria { get; set; }
         public int UsuarioId { get; set; }
-        public virtual UsuarioDto Usuario { get; set; }
+        public virtual UsuarioDto? Usuario { get; set; }
     }
 }

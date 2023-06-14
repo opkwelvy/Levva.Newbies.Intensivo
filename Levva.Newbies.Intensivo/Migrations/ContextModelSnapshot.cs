@@ -19,9 +19,9 @@ namespace Levva.Newbies.Intensivo.Migrations
 
             modelBuilder.Entity("Levva.Newbies.Intensivo.Domain.Models.Categoria", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Descricao")
                         .HasColumnType("TEXT");
@@ -33,12 +33,12 @@ namespace Levva.Newbies.Intensivo.Migrations
 
             modelBuilder.Entity("Levva.Newbies.Intensivo.Domain.Models.Transacao", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("TEXT");
 
-                    b.Property<int>("CategoriaId")
-                        .HasColumnType("INTEGER");
+                    b.Property<Guid>("CategoriaId")
+                        .HasColumnType("TEXT");
 
                     b.Property<DateTime>("Data")
                         .HasColumnType("TEXT");
@@ -49,8 +49,8 @@ namespace Levva.Newbies.Intensivo.Migrations
                     b.Property<int>("Tipo")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("UsuarioId")
-                        .HasColumnType("INTEGER");
+                    b.Property<Guid>("UsuarioId")
+                        .HasColumnType("TEXT");
 
                     b.Property<decimal>("Valor")
                         .HasColumnType("TEXT");
@@ -66,9 +66,9 @@ namespace Levva.Newbies.Intensivo.Migrations
 
             modelBuilder.Entity("Levva.Newbies.Intensivo.Domain.Models.Usuario", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Email")
                         .HasColumnType("TEXT");

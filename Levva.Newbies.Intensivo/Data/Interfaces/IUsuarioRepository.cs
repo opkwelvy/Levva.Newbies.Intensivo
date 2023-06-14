@@ -5,13 +5,11 @@ namespace Levva.Newbies.Intensivo.Data.Interfaces
 {
     public interface IUsuarioRepository
     {
-        void Create(UsuarioDto usuario);
-        UsuarioDto Get(int id);
-        List<UsuarioDto> GetAll();
-        void Update(UsuarioDto usuario);
+        Usuario Get(int id);
+        Usuario GetByEmailAndSenha(string email, string senha);
+        List<Usuario> GetAll();
         void Delete(int id);
         void Create(Usuario usuario);
-        void Update(UsuarioDto usuario);
         void Update(Usuario usuario);
     }
 }
