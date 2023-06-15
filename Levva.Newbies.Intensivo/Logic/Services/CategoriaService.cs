@@ -19,16 +19,15 @@ namespace Levva.Newbies.Intensivo.Logic.Services
     {
       var _categoria = _mapper.Map<Categoria>(categoria);
       _categoria.Id = Guid.NewGuid();
-      _repository.Create(_categoria);
-      return _categoria;  
+      return _repository.Create(_categoria); 
     }
 
-    public void Delete(int id)
+    public void Delete(Guid id)
     {
       _repository.Delete(id);
     }
 
-    public CategoriaDto Get(int id)
+    public CategoriaDto Get(Guid id)
     {
       var categoria = _mapper.Map<CategoriaDto>(_repository.Get(id));
       return categoria;

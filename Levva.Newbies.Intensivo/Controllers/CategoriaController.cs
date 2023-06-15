@@ -12,7 +12,7 @@ namespace Levva.Newbies.Intensivo.Controllers
     public class CategoriaController : ControllerBase
     {
         private readonly ICategoriaService _service;
-        public CategoriaController(CategoriaService service)
+        public CategoriaController(ICategoriaService service)
         {
             _service = service;
         }
@@ -20,15 +20,15 @@ namespace Levva.Newbies.Intensivo.Controllers
         public ActionResult<Categoria> Create(CategoriaDto categoria)
         {
             var categoriaCriada = _service.Create(categoria);
-            return Ok(categoriaCriada);
+            return categoriaCriada;
         }
         [HttpGet]
-        public ActionResult<CategoriaDto> Get(int id)
+        public ActionResult<CategoriaDto> Get(Guid id)
         {
             return _service.Get(id);
         }
         [HttpGet("list")]
-        public ActionResult<List<CategoriaDto>> GetAll(int id)
+        public ActionResult<List<CategoriaDto>> GetAll(Guid id)
         {
             return _service.GetAll();
         }
@@ -39,7 +39,7 @@ namespace Levva.Newbies.Intensivo.Controllers
             return Ok();
         }
         [HttpDelete]
-        public IActionResult Delete(int id)
+        public IActionResult Delete(Guid id)
         {
             _service.Delete(id);
             return Ok();

@@ -8,7 +8,7 @@ namespace Levva.Newbies.Intensivo.Domain.Models
     public string Descricao { get; set; }
     public decimal Valor { get; set; }
     public DateTime Data { get; set; }
-    public TipoTransacaoEnum Tipo { get; set; }
+    public int Tipo { get; set; }
     public Guid CategoriaId { get; set; }
     public virtual Categoria Categoria { get; set; }
     public Guid UsuarioId { get; set; }

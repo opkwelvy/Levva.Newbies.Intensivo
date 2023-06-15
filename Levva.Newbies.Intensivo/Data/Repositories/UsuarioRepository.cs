@@ -19,7 +19,7 @@ namespace Levva.Newbies.Intensivo.Data.Repositories
 
     }
 
-    public void Delete(int id)
+    public void Delete(Guid id)
     {
       var usuario = _context.Usuario.Find(id);
       _context.Usuario.Remove(usuario);
@@ -27,7 +27,7 @@ namespace Levva.Newbies.Intensivo.Data.Repositories
 
     }
 
-    public Usuario Get(int id)
+    public Usuario Get(Guid id)
     {
       return _context.Usuario.Find(id);
     }

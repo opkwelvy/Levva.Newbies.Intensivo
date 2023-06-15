@@ -6,9 +6,9 @@ namespace Levva.Newbies.Intensivo.Logic.Interfaces
     public interface ICategoriaService
     {
         Categoria Create(CategoriaDto categoria);
-        CategoriaDto Get(int id);
+        CategoriaDto Get(Guid id);
         List<CategoriaDto> GetAll();    
         void Update(CategoriaDto categoria);    
-        void Delete(int id);
+        void Delete(Guid id);
     }
 }

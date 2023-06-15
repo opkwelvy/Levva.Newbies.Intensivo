@@ -32,12 +32,12 @@ namespace Levva.Newbies.Intensivo.Logic.Services
 
     }
 
-    public void Delete(int id)
+    public void Delete(Guid id)
     {
       _repository.Delete(id);
     }
 
-    public UsuarioDto Get(int id)
+    public UsuarioDto Get(Guid id)
     {
       var _usuario = _mapper.Map<UsuarioDto>(_repository.Get(id));
       return _usuario;
@@ -52,8 +52,9 @@ namespace Levva.Newbies.Intensivo.Logic.Services
 
     public void Update(UsuarioDto usuario)
     {
-      var _usuario = _mapper.Map<Usuario>(usuario);
-      _repository.Update(_usuario);
+      var usuarioNome = _repository.Get(usuario.Id);
+      usuarioNome.Nome = usuario.Nome;
+      _repository.Update(usuarioNome);
     }
     public LoginDto Login(LoginDto login)
     {
@@ -67,7 +68,9 @@ namespace Levva.Newbies.Intensivo.Logic.Services
       {
         Subject = new ClaimsIdentity(new Claim[]
           {
-                    new Claim(ClaimTypes.Name, usuario.Email)
+                    new Claim(ClaimTypes.Name, usuario.Id.ToString()),
+                    new Claim(ClaimTypes.Email, usuario.Email)
+
           }),
         Expires = DateTime.UtcNow.AddHours(1),
         SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
@@ -78,6 +81,7 @@ namespace Levva.Newbies.Intensivo.Logic.Services
       login.Nome = usuario.Nome;
       login.Email = usuario.Email;
       login.Senha = null;
+      login.Id = usuario.Id;
       return login;
     }
   }

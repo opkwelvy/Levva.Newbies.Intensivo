@@ -6,10 +6,10 @@ namespace Levva.Newbies.Intensivo.Logic.Interfaces
     public interface IUsuarioService
     {
         Usuario Create(NovoUsuarioDto usuarioDto);
-        UsuarioDto Get(int id);
+        UsuarioDto Get(Guid id);
         List<UsuarioDto> GetAll();
         void Update(UsuarioDto usuarioDto);
-        void Delete(int id);
+        void Delete(Guid id);
         LoginDto Login(LoginDto loginDto);
     }
 }

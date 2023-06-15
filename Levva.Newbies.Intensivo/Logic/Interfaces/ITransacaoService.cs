@@ -1,14 +1,15 @@
-﻿using Levva.Newbies.Intensivo.Logic.Dtos;
+﻿using Levva.Newbies.Intensivo.Domain.Models;
+using Levva.Newbies.Intensivo.Logic.Dtos;
 
 namespace Levva.Newbies.Intensivo.Logic.Interfaces
 {
     public interface ITransacaoService
     {
-        void Create(TransacaoDto transacao);
-        TransacaoDto Get(int id);   
+        TransacaoDto Create(Guid userId, NovaTransacaoDto transacao);
+        TransacaoDto Get(Guid id);   
         List<TransacaoDto> GetAll();
         void Update(TransacaoDto transacao);
-        void Delete(int id);
+        void Delete(Guid id);
 
     }
 }

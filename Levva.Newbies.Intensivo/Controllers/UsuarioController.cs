@@ -23,23 +23,25 @@ namespace Levva.Newbies.Intensivo.Controllers
       return Created("", usuario);
     }
     [HttpGet]
-    public ActionResult<UsuarioDto> Get(int id)
+    public ActionResult<UsuarioDto> Get(Guid id)
     {
       return _service.Get(id);
     }
     [HttpGet("list")]
-    public ActionResult<List<UsuarioDto>> GetAll(int id)
+    public ActionResult<List<UsuarioDto>> GetAll(Guid id)
     {
       return _service.GetAll();
     }
     [HttpPut]
     public IActionResult Update(UsuarioDto usuario)
     {
+      var userId = User.Identity.Name;
+      usuario.Id = new Guid(userId);
       _service.Update(usuario);
       return Ok();
     }
     [HttpDelete]
-    public IActionResult Delete(int id)
+    public IActionResult Delete(Guid id)
     {
       _service.Delete(id);
       return Ok();

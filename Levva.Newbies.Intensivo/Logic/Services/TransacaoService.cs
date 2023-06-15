@@ -17,18 +17,20 @@ namespace Levva.Newbies.Intensivo.Logic.Services
             _repository = repository;
             _mapper = mapper;
         }
-        public void Create(TransacaoDto transacao)
+        public TransacaoDto Create(Guid userId, NovaTransacaoDto transacao)
         {
             var _transacao = _mapper.Map<Transacao>(transacao);
-            _repository.Create(_transacao);
+            _transacao.Id = Guid.NewGuid();
+            _transacao.UsuarioId = userId;
+            return _mapper.Map<TransacaoDto>(_repository.Create(_transacao));
         }
 
-        public void Delete(int id)
+        public void Delete(Guid id)
         {
             _repository.Delete(id);
         }
 
-        public TransacaoDto Get(int id)
+        public TransacaoDto Get(Guid id)
         {
             var transacao = _mapper.Map<TransacaoDto>(_repository.Get(id));
             return transacao;
