@@ -47,5 +47,15 @@ namespace Levva.Newbies.Intensivo.Logic.Services
             var _transacao = _mapper.Map<Transacao>(transacao);
             _repository.Update(_transacao);
         }
+        public List<TransacaoDto> Search(string Search)
+        {
+            var transactionList = _repository.GetAll();
+            var transactionsListed = transactionList.Where(transaction =>
+            {
+                return transaction.Descricao.Contains(Search);
+            }).ToList();
+            var mappedList = _mapper.Map<List<TransacaoDto>>(transactionsListed);
+            return mappedList;
+        }
     }
 }

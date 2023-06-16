@@ -29,10 +29,11 @@ namespace Levva.Newbies.Intensivo.Controllers
             return Created("", transaction); ;
             
         }
-        [HttpGet]
-        public ActionResult<TransacaoDto> Get(Guid id)
+        [HttpGet("{SearchParams}")]
+        public ActionResult<List<TransacaoDto>> Get(string SearchParams)
         {
-            return _service.Get(id);
+
+            return _service.Search(SearchParams);
         }
         [HttpGet("list")]
         public ActionResult<List<TransacaoDto>> GetAll(Guid id)

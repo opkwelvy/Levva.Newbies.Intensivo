@@ -10,6 +10,7 @@ namespace Levva.Newbies.Intensivo.Logic.Interfaces
         List<TransacaoDto> GetAll();
         void Update(TransacaoDto transacao);
         void Delete(Guid id);
+        List<TransacaoDto> Search(string Search);
 
     }
 }
