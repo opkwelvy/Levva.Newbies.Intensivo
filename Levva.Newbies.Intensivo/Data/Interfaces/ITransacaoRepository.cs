@@ -4,12 +4,10 @@ namespace Levva.Newbies.Intensivo.Data.Interfaces
 {
     public interface ITransacaoRepository
     {
-        void Create(TransacaoDto transacao);
-        TransacaoDto Get(int id);
-        List<TransacaoDto> GetAll();   
-        void Update(TransacaoDto transacao);
-        void Delete(int id);
-        void Create(Transacao transacao);
+        Transacao Create(Transacao transacao);
+        Transacao Get(Guid id);
+        List<Transacao> GetAll();   
         void Update(Transacao transacao);
+        void Delete(Guid id);
     }   
 }

@@ -1,5 +1,6 @@
 ﻿using Levva.Newbies.Intensivo.Data.Interfaces;
 using Levva.Newbies.Intensivo.Domain.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Levva.Newbies.Intensivo.Data.Repositories
 {
@@ -10,13 +11,15 @@ namespace Levva.Newbies.Intensivo.Data.Repositories
         {
             _context = context;
         }
-        public void Create(TransacaoDto transacao)
+        public Transacao Create(Transacao transacao)
         {
             _context.Transacao.Add(transacao);
+            transacao.Data = DateTime.Now;
             _context.SaveChanges();
+            return transacao;
         }
 
-        public void Delete(int id)
+        public void Delete(Guid id)
         {
             var transacao = _context.Transacao.Find(id);
             _context.Transacao.Remove(transacao);
@@ -24,17 +27,17 @@ namespace Levva.Newbies.Intensivo.Data.Repositories
 
         }
 
-        public TransacaoDto Get(int id)
+        public Transacao Get(Guid id)
         {
             return _context.Transacao.Find(id);
         }
 
-        public List<TransacaoDto> GetAll()
+        public List<Transacao> GetAll()
         {
-            return _context.Transacao.ToList();
+            return _context.Transacao.Include(x => x.Categoria).ToList();
         }
 
-        public void Update(TransacaoDto transacao)
+        public void Update(Transacao transacao)
         {
             _context.Transacao.Update(transacao);
             _context.SaveChanges();

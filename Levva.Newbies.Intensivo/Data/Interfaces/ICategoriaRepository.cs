@@ -5,11 +5,10 @@ namespace Levva.Newbies.Intensivo.Data.Interfaces
 {
     public interface ICategoriaRepository
     {
-        void Create(Categoria categoria);
-        Categoria Get(int id);
+        Categoria Create(Categoria categoria);
+        Categoria Get(Guid id);
         List<Categoria> GetAll();
         void Update(Categoria categoria);
-        void Delete(int id);
-        void Create(CategoriaDto categoria);
+        void Delete(Guid id);
     }
 }

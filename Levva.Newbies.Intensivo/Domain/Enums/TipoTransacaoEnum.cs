@@ -1,8 +1,8 @@
 ﻿namespace Levva.Newbies.Intensivo.Domain.Enums
 {
-    public enum TipoTransacaoEnum
+    public enum Tipo
     {
         Entrada = 0,
-        Saida = 1
+        Saida = 1,
     }
 }
